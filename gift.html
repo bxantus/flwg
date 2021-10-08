@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Gift!</title>
+    <script src="gift.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @media (orientation: landscape) and (min-width: 550px){
+            body {
+                max-width: 550px;
+                margin: auto;
+                background-color: #F5F5F6;
+            }
+            /*see: https://css-tricks.com/elegant-fix-jumping-scrollbar-issue/*/
+            html { margin-left: calc(100vw - 100%); }
+        }
+
+        body > * {
+            background-color: white;
+        }
+
+        .canvas {
+            position: relative;
+        }
+
+        .flower, .gift-wrap {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .gift-wrap {
+            position: initial;
+            width: 80%;
+            align-self: center;
+            padding-top: 20px;
+        }
+
+        .message {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signature {
+            text-align: right;
+        }
+
+        .text {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+
+</html>

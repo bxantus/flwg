@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <meta charset="utf8">
+    <title>Create a nice bouquet</title>
+    <script src="editor.js"></script>
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            background-color: #E5E5E5;
+        }
+
+        #side {
+            width: 300px;
+            background-color: #D8D8D8;
+            padding: 10px;
+            display: flex;
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        #side .header {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #side .header:first-child {
+            margin-top: 0;
+        }
+
+        .flowers.grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(5, 50px);
+            grid-auto-rows: 50px;
+            
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        #canvas {
+            width: 500px;
+            background-color: white;
+            height: 100vh;
+            position: relative;
+        }
+
+        .flower.item {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flower.item.selected {
+            border: 1px solid;
+            border-color: #005282;
+        }
+
+        .props.grid {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .props label {
+            text-transform: capitalize;
+        }
+
+        .program {
+            /* allow resizing only in the vertical direction */
+            resize: vertical;
+        }
+
+        .program:invalid {
+            border-bottom: 2px solid red;
+        }
+
+        .settings button#save {
+            grid-column-end: span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="canvas">
+        </div>
+    </div>
+    <div id="side">
+        <div class="header">Tools</div>
+    </div>
+</body>
+
+</html>
